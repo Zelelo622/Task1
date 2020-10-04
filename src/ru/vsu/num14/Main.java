@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         double speed = readSpeed();
-        outputTimingStone(speed, calculatingTheTimeTheStoneFalls(speed));
+        printTimingStone(speed, calculatingTheTimeTheStoneFalls(speed));
     }
 
     static double calculatingTheTimeTheStoneFalls(double speed) {
@@ -20,7 +20,7 @@ public class Main {
         return scanner.nextInt();
     }
 
-    static void outputTimingStone(double speed, double time) {
+    static void printTimingStone(double speed, double time) {
         System.out.printf(
                 "With a speed V = %1$.2f, the stone will fall in t = %2$.2f seconds",
                 speed, time
