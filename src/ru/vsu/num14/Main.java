@@ -4,23 +4,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double speed = readSpeed();
-        printTimingStone(speed, calculatingTheTimeTheStoneFalls(speed));
+        double speed = readInteger("speed --> ");
+        printTimingStone(speed, calculateTheTimeTheStoneFalls(speed));
     }
 
-    static double calculatingTheTimeTheStoneFalls(double speed) {
+    private static double calculateTheTimeTheStoneFalls(double speed) {
         // g - Acceleration of gravity
         double g = 9.81;
         return 2 * speed / g;
     }
 
-    static double readSpeed() {
-        System.out.print("Enter speed: ");
+    private static int readInteger(String phrase) {
         Scanner scanner = new Scanner(System.in);
+        System.out.printf("Enter %s", phrase);
         return scanner.nextInt();
     }
 
-    static void printTimingStone(double speed, double time) {
+    private static void printTimingStone(double speed, double time) {
         System.out.printf(
                 "With a speed V = %1$.2f, the stone will fall in t = %2$.2f seconds",
                 speed, time
